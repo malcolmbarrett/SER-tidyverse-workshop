@@ -6,8 +6,8 @@ Recent developments by the R community have revolutionized the data analysis pip
 
 ## Agenda (in Pacific Time)
 
-* 9:00-10:00: Data manipulation using dplyr (Malcolm), [Slides](https://quirky-goodall-4c4d22.netlify.com/02_reading_and_wrangling_data)
-* 10:00-11:30: Data visualization using ggplot2 (Corinne), [Slides](https://quirky-goodall-4c4d22.netlify.com/03_Visualizing-data-in-R.html)
+* 9:00-10:00: Data manipulation using dplyr (Malcolm), [Slides]()
+* 10:00-11:30: Data visualization using ggplot2 (Corinne), [Slides]()
 * 11:00-11:15: Break
-* 11:15-12:15: Data visualization team exercise (Corinne and Malcolm), [Slides](https://quirky-goodall-4c4d22.netlify.com/04_Exercise_Visualization.html)
-* 12:15-1:00: Reproducible reports and manuscripts using R markdown (Malcolm), [Slides](https://quirky-goodall-4c4d22.netlify.com/05-Reproducing-Reports.html)
+* 11:15-12:15: Data visualization team exercise (Corinne and Malcolm), [Slides]()
+* 12:15-1:00: Reproducible reports and manuscripts using R markdown (Malcolm), [Slides]()
