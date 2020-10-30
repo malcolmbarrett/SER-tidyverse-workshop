@@ -6,8 +6,8 @@ Recent developments by the R community have revolutionized the data analysis pip
 
 ## Agenda (in Pacific Time)
 
-* 9:00-10:00: Data manipulation using dplyr (Malcolm), [Slides]()
+* 9:00-10:00: Data manipulation using dplyr (Malcolm), [Slides](https://ser-tidyverse-2020.netlify.app/dplyr_5verbs/dplyr_5verbs.html)
 * 10:00-11:30: Data visualization using ggplot2 (Corinne), [Slides]()
 * 11:00-11:15: Break
 * 11:15-12:15: Data visualization team exercise (Corinne and Malcolm), [Slides]()
-* 12:15-1:00: Reproducible reports and manuscripts using R markdown (Malcolm), [Slides]()
+* 12:15-1:00: Reproducible reports and manuscripts using R markdown (Malcolm), [Slides](https://ser-tidyverse-2020.netlify.app/rmarkdown_basics/rmarkdown_basics.html)
