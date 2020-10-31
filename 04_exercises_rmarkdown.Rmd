@@ -1,0 +1,114 @@
+---
+title: "Reproduce Reports"
+output: html_document
+params: 
+  continent: Americas
+bibliography: citations.bib
+---
+
+Chunks named "setup" are a little special. They will always run first in R Notebooks and interactively if they haven't been run yet.
+
+```{r setup, echo = FALSE, message = FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(tidyverse)
+library(gapminder)
+```
+
+## Your turn 1
+
+Create a new R Markdown file. Go to File > New File > R Markdown. Press OK. Save the file and press the "Knit" button above.
+
+## Your turn 2
+
+Create a code chunk. You can type it in manually, use the keyboard short-cut (Cmd/Ctrl + Option/Alt + I), or use the "Insert" button above. Put the following code in it:
+
+gapminder %>% 
+  slice(1:5) %>% 
+  knitr::kable()
+  
+Knit the document
+
+## Your turn 2: Bonus
+  
+Add `echo = FALSE` to the code chunk above and re-knit. What's different?
+
+## Your turn 3
+
+1. Remove `eval = FALSE` so that R Markdown evaluates the code.
+2. Use `summarize()` and `n_distinct()` to get the the number of unique years in gapminder and save the results as `n_years`.
+3. Use inline code to describe the data set in the text below the code chunk and re-knit.
+
+```{r, eval = FALSE}
+___ ___ gapminder %>% 
+  _________ %>% 
+  # pull() extracts a column as a vector
+  # if no column is called, it uses the most recently created
+  pull()
+```
+
+Gapminder observed data over _________ different years.
+
+
+## Your turn 4
+
+1. Set figure chunk options such as `dpi`, `fig.width`, and `fig.height`. Run `knitr::opts_chunk$get()` in the console to see the defaults.
+2. Change the YAML header above from `output: html_document` to another output type like `pdf_document` or `word_document`.
+3. Add your name to the YAML header using `author: Your Name`.
+
+```{r}
+gapminder %>% 
+  filter(continent != "Oceania") %>% 
+  ggplot(aes(x = year, y = lifeExp, group = country, color = country)) +
+  geom_line(lwd = 1, show.legend = FALSE) + 
+  facet_wrap(~ continent) +
+  # `country_colors` is an object included in gapminder
+  scale_color_manual(values = country_colors) + 
+  theme_minimal(14) + 
+  theme(strip.text = element_text(size = rel(1.1)))
+```
+
+# Take aways
+
+* R Markdown has simple syntax that's easy to use
+* Your analysis and narrative are easy to intertwine in R Markdown
+* You can re-run your analysis with different inputs and outputs
+* Code chunks provide a variety of options to change the resulting report
+* Use YAML to set options for R Markdown
+* R Markdown supports a powerful citation system. Find more CSL styles at https://github.com/citation-style-language/styles
+
+# Bonus Material
+
+Want a little more R Markdown? Try this bonus material
+
+## Learn Markdown Syntax
+To better learn markdown syntax, try the ten-twenty minute tutorial at https://commonmark.org/help/tutorial. 
+
+## Create a parameterized report
+
+Read the chapter on parameterized R Markdown reports in the R Markdown book: https://bookdown.org/yihui/rmarkdown/parameterized-reports.html
+
+1. Change the `params` option in the YAML header to use a different continent. Re-knit
+
+```{r}
+gapminder %>% 
+  filter(continent == params$continent) %>% 
+  ggplot(aes(x = year, y = lifeExp, group = country, color = country)) +
+  geom_line(lwd = 1, show.legend = FALSE) + 
+  scale_color_manual(values = country_colors) +
+  theme_minimal(14) + 
+  theme(strip.text = element_text(size = rel(1.1))) +
+  ggtitle(paste("Continent:", params$continent))
+```
+
+## Create citations
+
+Read the chapter on citations and bibliographies from R Markdown for Scientists: https://rmd4sci.njtierney.com/citing-articles-bibliography-styles.html
+
+1. Cite the Causal Inference book in text below in the format ```[@citation-label]``` (without the tick marks; you only need those to tell R Markdown not to evaluate the this). The label for the citation is `hernan_causal_2019`
+2. Add the American Journal of Epidemiology CSL to the YAML using `
+csl: aje.csl`
+
+We calculated the average treatment effect using g-computation ________.
+
+
