@@ -12,7 +12,7 @@ Recent developments by the R community have revolutionized the data analysis pip
 install.packages(c("tidyverse", "gapminder"))
 ```
 
-* Set up an account at [RStudio Cloud](http://rstudio.cloud/). We'll have a free cloud version R and RStudio available with all of the workshop materials included in case you have any issues witn your local installation!
+* Set up an account at [RStudio Cloud](http://rstudio.cloud/). We'll have a free cloud version R and RStudio available with all of the workshop materials included in case you have any issues with your local installation!
 * Download these materials locally using the usethis package:
 
 ```r
