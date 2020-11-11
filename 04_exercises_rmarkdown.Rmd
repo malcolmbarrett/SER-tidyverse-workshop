@@ -3,7 +3,7 @@ title: "Reproduce Reports"
 output: html_document
 params: 
   continent: Americas
-bibliography: citations.bib
+bibliography: "misc/citations.bib"
 ---
 
 Chunks named "setup" are a little special. They will always run first in R Notebooks and interactively if they haven't been run yet.
@@ -106,8 +106,7 @@ gapminder %>%
 Read the chapter on citations and bibliographies from R Markdown for Scientists: https://rmd4sci.njtierney.com/citing-articles-bibliography-styles.html
 
 1. Cite the Causal Inference book in text below in the format ```[@citation-label]``` (without the tick marks; you only need those to tell R Markdown not to evaluate the this). The label for the citation is `hernan_causal_2019`
-2. Add the American Journal of Epidemiology CSL to the YAML using `
-csl: aje.csl`
+2. Add the American Journal of Epidemiology CSL to the YAML using `csl: misc/aje.csl`
 
 We calculated the average treatment effect using g-computation ________.
 
