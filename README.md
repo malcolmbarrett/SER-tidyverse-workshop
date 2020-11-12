@@ -24,8 +24,9 @@ usethis will open the files right in RStudio. To open it in the future, open the
 
 ## Agenda (in Pacific Time)
 
+* 8:50-9:00: Zoom room open
 * 9:00-10:00: Data manipulation using dplyr (Malcolm), [Slides](https://ser-tidyverse-2020.netlify.app/dplyr_5verbs/dplyr_5verbs.html)
-* 10:00-11:30: Data visualization using ggplot2 (Corinne), [Slides](https://musing-benz-8f7c86.netlify.app/02_slides.html)
+* 10:00-11:00: Data visualization using ggplot2 (Corinne), [Slides](https://musing-benz-8f7c86.netlify.app/02_slides.html)
 * 11:00-11:15: Break
 * 11:15-12:15: Data visualization team exercise (Corinne and Malcolm), [Slides](https://musing-benz-8f7c86.netlify.app/03_slides.html)
 * 12:15-1:00: Reproducible reports and manuscripts using R markdown (Malcolm), [Slides](https://ser-tidyverse-2020.netlify.app/rmarkdown_basics/rmarkdown_basics.html)
